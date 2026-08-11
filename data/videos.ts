@@ -22,8 +22,8 @@ export const videos:Video[] = [
  sermon("sermon-005","HOEh8NNu4s8","따뜻한 복음의 길","하용조 목사","2026-07-13","위로",true),
  sermon("sermon-006","04IO6yChKzE","함께 묵상하는 말씀","추천 설교","2026-07-06","신앙생활",true),
  sermon("sermon-007","vMwQWu66jGE","오늘의 추천 말씀","추천 설교","2026-08-08","기도",true),
- sermon("sermon-008","","신앙을 삶으로 살아내는 길","김동호 목사","2026-08-01","관계",true),
- sermon("sermon-009","","묵상과 성찰이 있는 말씀","김기석 목사","2026-07-25","회복",true),
+ sermon("sermon-008","yiH6CKcjN4M","단물로 변한 마라의 쓴물","이일섭 목사","2026-08-09","회복",true),
+ sermon("sermon-009","nyWxv4-UUFk","예수 그리스도와 갈보리 십자가","이일섭 목사","2026-08-02","믿음",true),
  sermon("sermon-010","","고전 설교 아카이브","곽선희 목사","2026-07-18","신앙생활",true),
 ];
 
@@ -31,3 +31,4 @@ const officialSermonSearches: Record<string,string> = {
  "옥한흠 목사":"사랑의교회 옥한흠 목사 설교", "이재철 목사":"100주년기념교회 이재철 목사 설교", "조용기 목사":"여의도순복음교회 조용기 목사 설교", "이동원 목사":"지구촌교회 이동원 목사 설교", "하용조 목사":"온누리교회 하용조 목사 설교", "박영선 목사":"남포교회 박영선 목사 설교", "유기성 목사":"선한목자교회 유기성 목사 설교", "김동호 목사":"김동호 목사 공식 설교", "김기석 목사":"청파교회 김기석 목사 설교", "곽선희 목사":"소망교회 곽선희 목사 설교"
 };
 videos.filter(v=>v.type==="sermon"&&v.speaker).forEach(v=>{const q=officialSermonSearches[v.speaker!];if(q&&!v.youtubeId){v.youtubeUrl=`https://www.youtube.com/results?search_query=${encodeURIComponent(q)}`;v.channelName="YouTube 인기 설교";}});
+videos.filter(v=>v.speaker==="이일섭 목사").forEach(v=>{v.church="순복음강북교회";v.channelName="순복음강북교회 공식 YouTube";});
