@@ -1,0 +1,7 @@
+node_modules
+.next
+.pnpm-store
+tsconfig.tsbuildinfo
+.env*.local
+*.log
+.DS_Store

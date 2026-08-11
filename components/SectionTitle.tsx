@@ -1,0 +1,2 @@
+import Link from "next/link";
+export function SectionTitle({eyebrow,title,copy,href}:{eyebrow?:string;title:string;copy?:string;href?:string}){return <div className="section-head"><div><span className="eyebrow">{eyebrow}</span><h2 className="section-title">{title}</h2>{copy&&<p className="section-copy">{copy}</p>}</div>{href&&<Link className="view-all" href={href}>전체보기 <span>→</span></Link>}</div>}
