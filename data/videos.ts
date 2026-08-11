@@ -15,7 +15,7 @@ export const videos:Video[] = [
  worship("worship-010","bSxhc6xQaAw","너는 크게 자유를 외쳐라","bethlehem","2026-08-09","주일찬양"),
  worship("worship-011","EOr7WmjvZCQ","주 자비 영원하네","bethlehem","2026-08-02","주일찬양"),
  worship("worship-012","5Jr2l-dalnY","아무것도 두려워말라","gabriel","2026-08-05","주일찬양"),
- sermon("sermon-001","","제자훈련과 복음의 본질","옥한흠 목사","2026-08-10","믿음",true),
+ sermon("sermon-001","we7GanzRgEY","이것이 인생의 정답이다","옥한흠 목사","2026-08-10","믿음",true),
  sermon("sermon-002","R1Si69ITswo","창세기 강해 01 · 태초에","이재철 목사","2026-08-03","신앙생활",true,true),
  sermon("sermon-003","","믿음과 성령, 소망의 말씀","조용기 목사","2026-07-27","소망",true),
  sermon("sermon-004","","균형 있는 강해설교","이동원 목사","2026-07-20","믿음",true),
