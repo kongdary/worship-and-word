@@ -16,7 +16,7 @@ export const videos:Video[] = [
  worship("worship-011","EOr7WmjvZCQ","주 자비 영원하네","bethlehem","2026-08-02","주일찬양"),
  worship("worship-012","5Jr2l-dalnY","아무것도 두려워말라","gabriel","2026-08-05","주일찬양"),
  sermon("sermon-001","","제자훈련과 복음의 본질","옥한흠 목사","2026-08-10","믿음",true,true),
- sermon("sermon-002","","성경과 삶을 깊이 읽는 시간","이재철 목사","2026-08-03","신앙생활",true),
+ sermon("sermon-002","R1Si69ITswo","창세기 강해 01 · 태초에","이재철 목사","2026-08-03","신앙생활",true),
  sermon("sermon-003","","믿음과 성령, 소망의 말씀","조용기 목사","2026-07-27","소망",true),
  sermon("sermon-004","","균형 있는 강해설교","이동원 목사","2026-07-20","믿음",true),
  sermon("sermon-005","","따뜻한 복음의 길","하용조 목사","2026-07-13","위로",true),
@@ -30,4 +30,4 @@ export const videos:Video[] = [
 const officialSermonSearches: Record<string,string> = {
  "옥한흠 목사":"사랑의교회 옥한흠 목사 설교", "이재철 목사":"100주년기념교회 이재철 목사 설교", "조용기 목사":"여의도순복음교회 조용기 목사 설교", "이동원 목사":"지구촌교회 이동원 목사 설교", "하용조 목사":"온누리교회 하용조 목사 설교", "박영선 목사":"남포교회 박영선 목사 설교", "유기성 목사":"선한목자교회 유기성 목사 설교", "김동호 목사":"김동호 목사 공식 설교", "김기석 목사":"청파교회 김기석 목사 설교", "곽선희 목사":"소망교회 곽선희 목사 설교"
 };
-videos.filter(v=>v.type==="sermon"&&v.speaker).forEach(v=>{const q=officialSermonSearches[v.speaker!];if(q){v.youtubeUrl=`https://www.youtube.com/results?search_query=${encodeURIComponent(q)}`;v.channelName="공식 교회·사역 아카이브";}});
+videos.filter(v=>v.type==="sermon"&&v.speaker).forEach(v=>{const q=officialSermonSearches[v.speaker!];if(q&&!v.youtubeId){v.youtubeUrl=`https://www.youtube.com/results?search_query=${encodeURIComponent(q)}`;v.channelName="공식 교회·사역 아카이브";}});
